@@ -1,18 +1,31 @@
 package com.bridgelabz.maxprblm;
+import java.util.Scanner;
 
 public class MaxPrblm {
 
-	public static void main(String[] args) {
-		Integer Int1 = 10 , Int2 = 12, Int3 = 7; 
-		Float float1 = 2.7f , float2 = 19.3f, float3 = 7.5f; 
-		String xString = "Mango" , yString = "kiwi", zString = "Dragonfruit"; 
-		Operation operation = new Operation(Int1,Int2,Int3);
-		int intMax=operation.testMaximum(Int1,Int2,Int3);
-		operation.printMax(Int1, Int2, Int3,intMax);
-		Operation operation1 = new Operation(float1,float2,float3);
-		Float floatMax =operation1.testMaximum(float1,float2,float3);
-		operation.printMax(float1, Operation(xString,yString,zString);
-		String stringMax =operation2.testMaximum(xString,yString,zString);
-		operation.printMax(xString, yString, zString,stringMax);
-	}
+		static Integer firstNumber,secondNumber,thirdNumber;
+		public static void main(String[] args) {
+			getInput();
+			testMaximum(firstNumber,secondNumber,thirdNumber);
+		}
+		public static void getInput() {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Enter first Number");
+			firstNumber = sc.nextInt();
+			System.out.println("Enter second Number");
+			secondNumber = sc.nextInt();
+			System.out.println("Enter third Number");
+			thirdNumber = sc.nextInt();
+		}
+		public static void testMaximum(Integer x,Integer y,Integer z) {
+			Integer max = x;
+			if(y.compareTo(max) > 0){
+				max = y;
+			}
+			if(z.compareTo(max) > 0){
+				max = z;
+			}
+			System.out.println(max+" is maximum number");
+		}
 }
+	
